@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f6efe4" />
+<title>花東慢慢行｜三日火車小旅行</title>
+<style>
+:root{--cream:#fbf7ef;--paper:#fffdf8;--ink:#39483e;--muted:#7d887d;--green:#718b70;--sage:#dce7d8;--peach:#f3d7c6;--yellow:#f4e7b9;--line:#e9e3d8;--shadow:0 12px 32px rgba(67,77,59,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Noto Sans TC","PingFang TC",system-ui,sans-serif;line-height:1.65}
+button,a{font:inherit}button{cursor:pointer}.hero{position:relative;overflow:hidden;padding:54px 20px 42px;background:linear-gradient(135deg,#e7eee1,#f8eadb 75%);text-align:center}.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.32)}.hero:before{width:220px;height:220px;left:-80px;top:-90px}.hero:after{width:180px;height:180px;right:-55px;bottom:-95px}.eyebrow{letter-spacing:.18em;font-size:.76rem;color:#6d806d;font-weight:700}.hero h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.2;margin:12px 0 10px;letter-spacing:.04em}.hero p{margin:0;color:#667568}.hero .stamp{display:inline-block;margin-top:22px;padding:7px 15px;border:1px solid rgba(93,119,91,.35);border-radius:999px;font-size:.84rem;color:#5d775b;background:rgba(255,255,255,.35)}
+.wrap{max-width:980px;margin:auto;padding:0 18px}.intro{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin:24px auto}.panel{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px 20px;box-shadow:var(--shadow)}.panel h2{font-size:1.05rem;margin:0 0 8px}.panel p{margin:0;color:#68766b;font-size:.93rem}.ticket{background:#f0f3e9}.ticket strong{display:block;font-size:1.15rem;margin:3px 0}.ticket small{color:#74816f}.progress-panel{margin:18px auto 22px}.progress-top{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:.9rem}.progress-track{height:9px;background:#edf0e9;border-radius:99px;overflow:hidden;margin-top:10px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#8eaa85,#c3b98b);border-radius:99px;transition:width .25s}
+.day-tabs{display:flex;gap:9px;overflow:auto;padding:4px 1px 14px}.day-tab{border:1px solid var(--line);background:#fffdf8;color:#647265;border-radius:999px;padding:10px 18px;white-space:nowrap;font-weight:650;transition:.2s}.day-tab.active{background:var(--green);border-color:var(--green);color:white;box-shadow:0 5px 14px #718b7030}.day-card{display:none;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);animation:rise .25s ease}.day-card.active{display:block}@keyframes rise{from{opacity:.5;transform:translateY(5px)}to{opacity:1;transform:none}}.day-heading{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:18px}.day-heading h2{margin:0;font-size:1.5rem}.day-heading p{margin:4px 0 0;color:var(--muted);font-size:.9rem}.day-number{flex:0 0 auto;background:var(--sage);color:#587052;border-radius:16px;padding:7px 12px;font-weight:800}.timeline{position:relative;margin:6px 0 20px 9px;padding-left:25px;border-left:2px dashed #d8dfd2}.stop{position:relative;padding:0 0 22px}.stop:last-child{padding-bottom:0}.stop:before{content:"";position:absolute;left:-32px;top:6px;width:12px;height:12px;border-radius:50%;background:#91a889;border:3px solid #f3f6ef;box-shadow:0 0 0 1px #91a889}.stop h3{font-size:1.02rem;margin:0 0 4px}.stop p{font-size:.9rem;color:#748075;margin:0 0 8px}.meta{display:flex;gap:7px;flex-wrap:wrap}.chip{display:inline-flex;align-items:center;gap:4px;border-radius:999px;background:#f4f1e8;color:#77735e;padding:4px 9px;font-size:.76rem}.chip.bus{background:#edf2e9;color:#647c5e}.chip.bike{background:#f9eee6;color:#a0785f}.checkrow{display:flex;align-items:flex-start;gap:9px;margin-top:10px;font-size:.88rem;color:#637064}.checkrow input{accent-color:#718b70;width:17px;height:17px;margin-top:3px}.stay{background:#f9f0e7;border-radius:15px;padding:13px 15px;margin-top:18px;font-size:.9rem}.stay strong{display:block;margin-bottom:3px}.day-footer{display:flex;justify-content:space-between;gap:10px;margin-top:20px}.navbtn{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 15px;color:#647265}.navbtn.primary{background:#718b70;color:white;border-color:#718b70}.notes{margin:18px 0 30px}.notes textarea{width:100%;min-height:86px;resize:vertical;border:1px solid var(--line);border-radius:14px;background:#fffefa;padding:12px;color:var(--ink);font:inherit;outline-color:#9bb093}.notes label{display:block;font-weight:700;font-size:.92rem;margin-bottom:7px}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0 36px}.tip{background:#f1f4eb}.tip ul{padding-left:19px;margin:7px 0 0;color:#68766b;font-size:.9rem}.tip li{margin:5px 0}.maplink{display:inline-block;color:#6d8668;text-decoration:none;font-size:.85rem;border-bottom:1px dashed #9bad94;margin-top:3px}.maplink:hover{color:#3f6542}.footer{text-align:center;color:#899286;font-size:.8rem;padding:0 16px 35px}.reset{border:0;background:none;color:#8b8173;text-decoration:underline;font-size:.82rem;padding:6px}
+@media(max-width:650px){.intro,.bottom-grid{grid-template-columns:1fr}.hero{padding:43px 18px 35px}.day-card{padding:18px}.day-heading h2{font-size:1.3rem}.day-footer{flex-wrap:wrap}.progress-top{font-size:.84rem}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="eyebrow">A LITTLE TRAIN JOURNEY · TAIWAN</div>
+  <h1>花東慢慢行</h1>
+  <p>搭上火車，沿著山海與稻浪，收藏三天的小風景。</p>
+  <div class="stamp">🚆 Taiwan PASS 台鐵三日票・公車・單車</div>
+</header>
+<main class="wrap">
+  <section class="intro">
+    <div class="panel"><h2>🍃 這趟旅行</h2><p>以台鐵移動為主，搭配公車與單車探索宜蘭、花蓮及花東縱谷。步調放慢一點，把沿途的風景好好收進回憶裡。</p></div>
+    <div class="panel ticket"><h2>🎫 交通小提醒</h2><strong>Taiwan PASS｜台鐵三日票</strong><small>出發前確認票券適用範圍、啟用方式與台鐵班次；公車接駁請依當日班表安排。</small></div>
+  </section>
+  <section class="panel progress-panel" aria-live="polite">
+    <div class="progress-top"><strong>旅行完成進度</strong><span id="progressText">0 / 7 個景點</span></div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  </section>
+  <nav class="day-tabs" aria-label="選擇旅遊日期">
+    <button class="day-tab active" data-day="0">DAY 1　宜蘭・前往花蓮</button>
+    <button class="day-tab" data-day="1">DAY 2　花蓮・湖畔慢遊</button>
+    <button class="day-tab" data-day="2">DAY 3　花東縱谷・稻浪</button>
+  </nav>
+
+  <section class="day-card active" data-card="0">
+    <div class="day-heading"><div><h2>溪畔散步與落羽松</h2><p>從宜蘭的綠意出發，慢慢抵達花蓮。</p></div><div class="day-number">DAY 01</div></div>
+    <div class="timeline">
+      <article class="stop"><h3>🌲 安農溪落羽松</h3><p>沿著溪畔散步，欣賞季節限定的落羽松景色，拍下旅程的第一張照片。</p><div class="meta"><span class="chip">📍 宜蘭・三星</span><span class="chip">🌿 溪畔散步</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=安農溪落羽松">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+      <article class="stop"><h3>💧 安農溪分洪堰自然生態園區</h3><p>走訪分洪堰周邊的自然生態景觀，感受水岸與綠地交織的悠閒氛圍。</p><div class="meta"><span class="chip">📍 宜蘭・三星</span><span class="chip">🌱 自然生態</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=安農溪分洪堰自然生態園區">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+      <article class="stop"><h3>🏨 入住花蓮勤天大飯店</h3><p>抵達花蓮後辦理入住，晚上好好休息，為明天的湖畔行程充電。</p><div class="meta"><span class="chip">📍 花蓮市</span><span class="chip">🛏️ 住宿</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=花蓮勤天大飯店">查看飯店位置 ↗</a></article>
+    </div>
+    <div class="stay"><strong>🌙 今晚住宿</strong>花蓮勤天大飯店</div>
+    <div class="day-footer"><span></span><button class="navbtn primary next">前往 Day 2 →</button></div>
+  </section>
+
+  <section class="day-card" data-card="1">
+    <div class="day-heading"><div><h2>渡假園區與湖畔時光</h2><p>在花蓮放慢速度，享受甜點與湖光山色。</p></div><div class="day-number">DAY 02</div></div>
+    <div class="timeline">
+      <article class="stop"><h3>☕ 理想大地渡假飯店・星巴克</h3><p>漫遊理想大地渡假飯店園區，接著到星巴克花蓮理想門市享用甜點、喝杯咖啡。</p><div class="meta"><span class="chip">📍 花蓮・壽豐</span><span class="chip">🍰 咖啡甜點</span><span class="chip">📷 園區漫遊</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=花蓮理想大地渡假飯店">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+      <article class="stop"><h3>🚲 鯉魚潭風景遊憩區</h3><p>租借自行車環湖，沿途欣賞湖面、山景與林蔭，累了就停下來休息拍照。</p><div class="meta"><span class="chip">📍 花蓮・壽豐</span><span class="chip bike">🚲 自行車環湖</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=鯉魚潭風景遊憩區">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+    </div>
+    <div class="stay"><strong>🌙 今晚住宿</strong>續住花蓮勤天大飯店</div>
+    <div class="day-footer"><button class="navbtn prev">← 回到 Day 1</button><button class="navbtn primary next">前往 Day 3 →</button></div>
+  </section>
+
+  <section class="day-card" data-card="2">
+    <div class="day-heading"><div><h2>森林鐵道、池畔與金色稻浪</h2><p>走進花東縱谷，讓單車帶你遇見田野風景。</p></div><div class="day-number">DAY 03</div></div>
+    <div class="timeline">
+      <article class="stop"><h3>🌳 大農大富平地森林園區</h3><p>欣賞園區內的藝術作品，再騎著單車穿梭森林步道，享受被樹林包圍的清新時光。</p><div class="meta"><span class="chip">📍 花蓮・光復</span><span class="chip bike">🚲 森林自行車</span><span class="chip">🎨 藝術作品</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=大農大富平地森林園區">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+      <article class="stop"><h3>🪷 大波池</h3><p>騎車到池畔走走，欣賞水面與周圍田園景致，享受一段安靜的時光。</p><div class="meta"><span class="chip">📍 花蓮・富里</span><span class="chip bike">🚲 單車移動</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=大波池">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+      <article class="stop"><h3>🌾 伯朗大道・天堂路</h3><p>騎遊筆直田間道路，欣賞季節限定的金黃稻穗，在天堂路留下旅行紀念照。</p><div class="meta"><span class="chip">📍 台東・池上</span><span class="chip bike">🚲 單車漫遊</span><span class="chip">📸 拍照打卡</span></div><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=伯朗大道天堂路">開啟地圖 ↗</a><label class="checkrow"><input type="checkbox" class="done">完成這個景點</label></article>
+    </div>
+    <div class="stay"><strong>✨ 今日小提醒</strong>稻穗是否金黃會受季節與收割時間影響；出發前可確認池上當地稻作景況，並預留還車及前往車站的時間。</div>
+    <div class="day-footer"><button class="navbtn prev">← 回到 Day 2</button><button class="navbtn" id="backTop">回到最上方 ↑</button></div>
+  </section>
+
+  <section class="notes panel">
+    <label for="tripNotes">📝 我的旅行備忘錄</label>
+    <textarea id="tripNotes" placeholder="記下想吃的美食、火車班次、租車資訊或其他小提醒……"></textarea>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:7px"><small style="color:#899286">內容會保存在這台裝置的瀏覽器中。</small><button class="reset" id="resetAll">清除勾選與備忘錄</button></div>
+  </section>
+  <section class="bottom-grid">
+    <div class="panel tip"><h2>🚆 交通安排小筆記</h2><ul><li>以台鐵串接宜蘭、花蓮與花東縱谷各站。</li><li>景點間的公車班次、站牌及步行距離，請依實際出發日期確認。</li><li>單車行程先確認租借地點、營業時間與還車方式。</li><li>台鐵三日票的適用車種、座位規則及使用期限，以官方公告為準。</li></ul></div>
+    <div class="panel"><h2>🎒 出發前 Check list</h2><label class="checkrow"><input type="checkbox" class="packing">確認 Taiwan PASS 啟用及乘車規則</label><label class="checkrow"><input type="checkbox" class="packing">查好台鐵與公車時刻</label><label class="checkrow"><input type="checkbox" class="packing">確認飯店訂房與入住時間</label><label class="checkrow"><input type="checkbox" class="packing">確認單車租借、還車資訊</label><label class="checkrow"><input type="checkbox" class="packing">防曬用品、雨具與行動電源</label></div>
+  </section>
+</main>
+<footer class="footer">願這趟旅程，有風、有光，也有剛剛好的慢。 ♡<br><span>行程內容依個人提供資訊編排；實際交通與營業資訊請於出發前再次確認。</span></footer>
+<script>
+const tabs=[...document.querySelectorAll('.day-tab')],cards=[...document.querySelectorAll('.day-card')];
+function showDay(i){tabs.forEach((b,n)=>b.classList.toggle('active',n===i));cards.forEach((c,n)=>c.classList.toggle('active',n===i));}
+tabs.forEach(b=>b.addEventListener('click',()=>showDay(+b.dataset.day)));
+document.querySelectorAll('.next').forEach(b=>b.addEventListener('click',()=>{const i=cards.findIndex(c=>c.classList.contains('active'));showDay(Math.min(i+1,2));}));
+document.querySelectorAll('.prev').forEach(b=>b.addEventListener('click',()=>{const i=cards.findIndex(c=>c.classList.contains('active'));showDay(Math.max(i-1,0));}));
+document.getElementById('backTop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const allChecks=[...document.querySelectorAll('.done')];
+function updateProgress(){const n=allChecks.filter(x=>x.checked).length;document.getElementById('progressText').textContent=`${n} / ${allChecks.length} 個景點`;document.getElementById('progressFill').style.width=`${n/allChecks.length*100}%`;}
+allChecks.forEach((el,i)=>{el.checked=localStorage.getItem('trip-stop-'+i)==='1';el.addEventListener('change',()=>{localStorage.setItem('trip-stop-'+i,el.checked?'1':'0');updateProgress();});});
+const notes=document.getElementById('tripNotes');notes.value=localStorage.getItem('trip-notes')||'';notes.addEventListener('input',()=>localStorage.setItem('trip-notes',notes.value));
+const packing=[...document.querySelectorAll('.packing')];packing.forEach((el,i)=>{el.checked=localStorage.getItem('trip-pack-'+i)==='1';el.addEventListener('change',()=>localStorage.setItem('trip-pack-'+i,el.checked?'1':'0'));});
+document.getElementById('resetAll').addEventListener('click',()=>{if(!confirm('確定清除所有景點勾選、出發清單與備忘錄？'))return;[...allChecks,...packing].forEach(el=>el.checked=false);for(let i=0;i<allChecks.length;i++)localStorage.removeItem('trip-stop-'+i);for(let i=0;i<packing.length;i++)localStorage.removeItem('trip-pack-'+i);notes.value='';localStorage.removeItem('trip-notes');updateProgress();});
+updateProgress();
+</script>
+</body>
+</html>
